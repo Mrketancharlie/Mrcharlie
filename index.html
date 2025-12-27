@@ -1,10 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My First Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Journey</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+  background:#0f172a;
+  color:#f8fafc;
+  scroll-behavior:smooth;
+}
+
+/* HERO SECTION */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:linear-gradient(135deg,#020617,#1e293b);
+  padding:20px;
+}
+
+.hero h1{
+  font-size:3rem;
+  animation:fadeDown 2s;
+}
+
+.hero p{
+  margin-top:15px;
+  font-size:1.2rem;
+  max-width:600px;
+  opacity:0.9;
+}
+
+.hero button{
+  margin-top:30px;
+  padding:12px 30px;
+  font-size:1rem;
+  border:none;
+  border-radius:30px;
+  background:#38bdf8;
+  color:#020617;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.hero button:hover{
+  transform:scale(1.1);
+  background:#0ea5e9;
+}
+
+/* SECTIONS */
+section{
+  padding:80px 10%;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:2.2rem;
+}
+
+/* TIMELINE */
+.timeline{
+  position:relative;
+}
+
+.card{
+  background:#020617;
+  padding:25px;
+  margin-bottom:30px;
+  border-left:5px solid #38bdf8;
+  border-radius:8px;
+  animation:fadeUp 1.5s;
+}
+
+.card h3{
+  margin-bottom:10px;
+  color:#38bdf8;
+}
+
+/* QUOTE */
+.quote{
+  background:#020617;
+  padding:60px;
+  text-align:center;
+  font-size:1.5rem;
+  font-style:italic;
+}
+
+/* FOOTER */
+footer{
+  padding:30px;
+  text-align:center;
+  background:#020617;
+  font-size:0.9rem;
+  opacity:0.8;
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown{
+  from{opacity:0; transform:translateY(-50px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(50px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@media(max-width:768px){
+  .hero h1{font-size:2.2rem;}
+  section{padding:60px 6%;}
+}
+</style>
 </head>
+
 <body>
-  <h1>Website Live Ho Gayi 🎉</h1>
-  <p>This website is hosted free on GitHub Pages.</p>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Ek Aadmi, Ek Zindagi, Ek Kahani</h1>
+  <p>
+    Yeh website us vyakti ki kahani hai jisne girkar uthna seekha,
+    haar kar jeetna seekha aur khud ko khud hi banaya.
+  </p>
+  <button onclick="scrollLife()">Zindagi ki Kahani Dekho</button>
+</div>
+
+<!-- LIFE STORY -->
+<section id="life">
+  <h2 class="title">Zindagi ka Safar</h2>
+
+  <div class="timeline">
+
+    <div class="card">
+      <h3>👶 Bachpan</h3>
+      <p>
+        Ek simple ghar, limited sapne aur bahut saari masoomiyat.
+        Bachpan me duniya chhoti thi, par khwab bahut bade the.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🔥 Sangharsh</h3>
+      <p>
+        Zindagi ne imtihaan liya. Paisa, confidence aur support – sab kam tha.
+        Lekin haar maan lena us vyakti ki fitrat nahi thi.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>💡 Seekh</h3>
+      <p>
+        Galtiyon se seekhna, khud par vishwas banana aur har din
+        khud ko kal se behtar banana – yahin se asli badlaav aaya.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🏆 Safalta</h3>
+      <p>
+        Safalta ek din me nahi aayi, par jab aayi to poori zindagi
+        ka matlab badal diya. Mehnat kabhi bekaar nahi jaati.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- QUOTE -->
+<div class="quote">
+  “Zindagi ka asli maqsad perfect banna nahi,  
+  balki har din behtar banna hota hai.”
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 | Life Story Website  
+  <br>
+  Designed with ❤️
+</footer>
+
+<script>
+function scrollLife(){
+  document.getElementById("life").scrollIntoView({behavior:"smooth"});
+}
+</script>
+
 </body>
 </html>
